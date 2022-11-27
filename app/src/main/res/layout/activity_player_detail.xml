@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:background="@color/background_color"
+    tools:context=".PlayerDetailActivity">
+
+    <ImageView
+        android:id="@+id/imgPlayer"
+        android:layout_width="50pt"
+        android:layout_height="50pt"
+        android:layout_margin="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitlePlayerID"
+        android:layout_width="60pt"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/player_id"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tvPlayerID"
+        app:layout_constraintTop_toBottomOf="@+id/imgPlayer" />
+
+    <TextView
+        android:id="@+id/tvPlayerID"
+        android:layout_width="0pt"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="macauthu"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/tvTitlePlayerID"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgPlayer" />
+
+    <TextView
+        android:id="@+id/tvTitlePlayerName"
+        android:layout_width="60pt"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/player_name"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tvPlayerID"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitlePlayerID" />
+
+    <TextView
+        android:id="@+id/tvPlayerName"
+        android:layout_width="0pt"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="tencauthu"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/tvTitlePlayerID"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitlePlayerID" />
+
+    <TextView
+        android:id="@+id/tvTitlePlayerDob"
+        android:layout_width="60pt"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/player_dob"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tvPlayerID"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitlePlayerName" />
+
+    <TextView
+        android:id="@+id/tvPlayerDob"
+        android:layout_width="0pt"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="ngaysinh"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/tvTitlePlayerID"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitlePlayerName" />
+
+    <TextView
+        android:id="@+id/tvTitleClub"
+        android:layout_width="60pt"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/player_club"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tvPlayerID"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitlePlayerDob" />
+
+    <TextView
+        android:id="@+id/tvClub"
+        android:layout_width="0pt"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="doibong"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/tvTitlePlayerID"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitlePlayerDob" />
+
+    <TextView
+        android:id="@+id/tvTitlePlayerPostion"
+        android:layout_width="60pt"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/player_postion"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tvPlayerID"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleClub" />
+
+    <TextView
+        android:id="@+id/tvPlayerPostion"
+        android:layout_width="0pt"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="vitri"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/tvTitlePlayerID"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleClub" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dark_button"
+        android:text="@string/button_del"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnEdit"
+        app:layout_constraintTop_toBottomOf="@id/tvTitlePlayerPostion" />
+
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blue_button"
+        android:textColor="@android:color/white"
+        android:text="@string/button_edit"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        app:layout_constraintLeft_toRightOf="@+id/btnDelete"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitlePlayerPostion" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

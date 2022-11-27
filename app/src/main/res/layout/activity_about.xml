@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0pt"
+        android:layout_height="wrap_content"
+        android:text="@string/title_about"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="45pt"
+        android:layout_height="0pt"
+        android:gravity="center_vertical"
+        android:text="@string/student_name"
+        android:textSize="11pt"
+        app:layout_constraintBottom_toBottomOf="@id/tvNameAuthor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvNameAuthor"
+        android:layout_width="0pt"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textSize="12pt"
+        android:text="TRẦN THANH VINH"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/tvName"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvName"/>
+
+    <TextView
+        android:id="@+id/tvClass"
+        android:layout_width="45pt"
+        android:layout_height="0pt"
+        android:gravity="center_vertical"
+        android:text="@string/student_class"
+        android:textSize="11pt"
+        app:layout_constraintBottom_toBottomOf="@id/tvClassAuthor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNameAuthor" />
+
+    <TextView
+        android:id="@+id/tvClassAuthor"
+        android:layout_width="0pt"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textSize="12pt"
+        android:text="D19_TH07"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/tvClass"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvClass"/>
+
+    <TextView
+        android:id="@+id/tvStudentCode"
+        android:layout_width="45pt"
+        android:layout_height="0pt"
+        android:gravity="center_vertical"
+        android:text="@string/student_id"
+        android:textSize="11pt"
+        app:layout_constraintBottom_toBottomOf="@id/tvStudentCodeAuthor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvClassAuthor" />
+
+    <TextView
+        android:id="@+id/tvStudentCodeAuthor"
+        android:layout_width="0pt"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textSize="12pt"
+        android:text="DH51902450"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/tvStudentCode"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvStudentCode"/>
+
+    <TextView
+        android:id="@+id/tvStudentEmail"
+        android:layout_width="45pt"
+        android:layout_height="0pt"
+        android:gravity="center_vertical"
+        android:text="@string/student_email"
+        android:textSize="11pt"
+        app:layout_constraintBottom_toBottomOf="@id/tvStudentEmailAuthor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvStudentCodeAuthor" />
+
+    <TextView
+        android:id="@+id/tvStudentEmailAuthor"
+        android:layout_width="0pt"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textSize="12pt"
+        android:text="dh51902450@student.stu.edu.vn"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/tvStudentEmail"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvStudentEmail"/>
+
+    <TextView
+        android:id="@+id/tvStudentPhone"
+        android:layout_width="45pt"
+        android:layout_height="0pt"
+        android:gravity="center_vertical"
+        android:text="@string/student_phone"
+        android:textSize="11pt"
+        app:layout_constraintBottom_toBottomOf="@id/tvStudentPhoneAuthor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvStudentEmailAuthor" />
+
+    <TextView
+        android:id="@+id/tvStudentPhoneAuthor"
+        android:layout_width="0pt"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textSize="12pt"
+        android:text="0869632021"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/tvStudentPhone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvStudentPhone"/>
+
+    <Button
+        android:id="@+id/btnMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MAP"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStudentPhone" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".EditPlayerActivity">
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/title_player_edit"
+        android:textColor="@color/colorAccent"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPlayerID"
+        android:layout_width="50pt"
+        android:layout_height="0pt"
+        android:gravity="center_vertical"
+        android:text="@string/player_id"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/etPlayerID"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <EditText
+        android:id="@+id/etPlayerID"
+        android:layout_width="0pt"
+        android:layout_height="wrap_content"
+        android:hint="Mã cầu thủ"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@id/tvPlayerID"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvPlayerID" />
+
+
+    <TextView
+        android:id="@+id/tvPlayerName"
+        android:layout_width="50pt"
+        android:layout_height="0pt"
+        android:gravity="center_vertical"
+        android:text="@string/player_name"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/etPlayerName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPlayerID" />
+
+    <EditText
+        android:id="@+id/etPlayerName"
+        android:layout_width="0pt"
+        android:layout_height="wrap_content"
+        android:hint="Tên cầu thủ"
+        android:imeOptions="actionNext"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@id/tvPlayerName"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvPlayerName" />
+
+    <TextView
+        android:id="@+id/tvPlayerDob"
+        android:layout_width="50pt"
+        android:layout_height="0pt"
+        android:gravity="center_vertical"
+        android:text="@string/player_dob"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/etPlayerDob"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPlayerName" />
+
+    <EditText
+        android:id="@+id/etPlayerDob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="dd/MM/yyyy"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@id/tvPlayerDob"
+        app:layout_constraintTop_toTopOf="@id/tvPlayerDob" />
+
+    <ImageButton
+        android:id="@+id/btnDatePicker"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_date_picker"
+        app:layout_constraintLeft_toRightOf="@+id/etPlayerDob"
+        app:layout_constraintTop_toBottomOf="@+id/etPlayerName"
+        app:layout_constraintTop_toTopOf="@+id/etPlayerDob" />
+
+    <TextView
+        android:id="@+id/tvPlayerPostion"
+        android:layout_width="35pt"
+        android:layout_height="0pt"
+        android:gravity="center_vertical"
+        android:text="@string/player_postion"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/radPlayerPostion"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPlayerDob" />
+
+    <RadioGroup
+        android:id="@+id/radPlayerPostion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toRightOf="@+id/tvPlayerPostion"
+        app:layout_constraintTop_toTopOf="@+id/tvPlayerPostion">
+        <RadioButton
+            android:id="@+id/radPlayerPostionGK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="T.Môn"/>
+
+        <RadioButton
+            android:id="@+id/radPlayerPostionDF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="H.Vệ" />
+
+        <RadioButton
+            android:id="@+id/radPlayerPostionMF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="T.Vệ" />
+
+        <RadioButton
+            android:id="@+id/radPlayerPostionCF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="T.Đạo" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvClub"
+        android:layout_width="50pt"
+        android:layout_height="0pt"
+        android:gravity="center_vertical"
+        android:text="@string/player_club"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/spClub"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPlayerPostion" />
+
+
+    <Spinner
+        android:id="@+id/spClub"
+        android:layout_width="120pt"
+        android:layout_height="20pt"
+        app:layout_constraintLeft_toRightOf="@id/tvClub"
+        app:layout_constraintTop_toTopOf="@id/tvClub" />
+
+    <TextView
+        android:id="@+id/tvImage"
+        android:layout_width="50pt"
+        android:layout_height="0pt"
+        android:gravity="center_vertical"
+        android:text="@string/title_player_image"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnChooseImage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvClub" />
+
+    <Button
+        android:id="@+id/btnChooseImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_player_image_choose"
+        app:layout_constraintLeft_toRightOf="@id/tvImage"
+        app:layout_constraintTop_toTopOf="@id/tvImage"/>
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dark_button"
+        android:text="@string/button_cancel"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnSave"
+        app:layout_constraintTop_toBottomOf="@id/tvImage" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blue_button"
+        android:textColor="@android:color/white"
+        android:text="@string/button_save"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        app:layout_constraintLeft_toRightOf="@+id/btnCancel"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvImage" />
+
+    <ImageView
+        android:id="@+id/imgImage"
+        android:layout_width="100pt"
+        android:layout_height="100pt"
+        app:layout_constraintTop_toBottomOf="@+id/btnSave"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

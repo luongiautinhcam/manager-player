@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">Manager Player</string>
+    <string name="mapbox_access_token">pk.eyJ1IjoiYW52aW5obHVvbmciLCJhIjoiY2w5bTcwcjJpMmM4djNwbW5waWZpYWRmdCJ9.9D7BI7KYGE9zqlxw8KcLUw</string>
+
+    <string name="log_in">Login</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="sign_in">Sign in</string>
+    <string name="edit_user">username</string>
+    <string name="edit_password">password</string>
+
+    <!--    button-->
+    <string name="button_edit">EDIT</string>
+    <string name="button_del">DELETE</string>
+    <string name="button_cancel">CANCEL</string>
+    <string name="button_add">ADD</string>
+    <string name="button_save">SAVE</string>
+
+<!--    activity_main-->
+    <string name="list_player">List Player</string>
+    <string name="list_club">List Club</string>
+<!--    activity_club-->
+    <string name="title_club_main">List Club</string>
+<!--    activity_club_add-->
+    <string name="title_club_add">Add Club</string>
+    <string name="club_id">Club ID</string>
+    <string name="club_name">Club Name</string>
+    <string name="club_add_success">Add Success</string>
+<!--    activity_edit_club-->
+    <string name="title_club_edit">Club Details</string>
+<!--    activity_player-->
+    <string name="title_player_main">List Players</string>
+    <!--    activity_player_detail-->
+    <string name="title_player_detail">Player Details</string>
+    <string name="player_id">Player ID:</string>
+    <string name="player_name">Player Name:</string>
+    <string name="player_dob">Dob:</string>
+    <string name="player_club">Club:</string>
+    <string name="player_postion">Postion:</string>
+    <!--    activity_player_edit-->
+    <string name="title_player_edit">Edit Player</string>
+    <string name="title_player_image">Image:</string>
+    <string name="title_player_image_choose">Choose image</string>
+    <!--    activity_player_add-->
+    <string name="title_player_add">Add Player</string>
+    <string name="player_id_add">Player ID</string>
+    <string name="player_name_add">Player Name</string>
+
+    <!--    about-->
+    <string name="title_about">About App</string>
+    <string name="student_name">Name: </string>
+    <string name="student_class">Class:</string>
+    <string name="student_id">ID:</string>
+    <string name="student_email">Email:</string>
+    <string name="student_phone">Phone:</string>
+
+    <string name="facebook_app_id">526498191468722</string>
+    <string name="fb_login_protocol_scheme">fb526498191468722</string>
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QUẢN LÝ CẦU THỦ</string>
+    <string name="mapbox_access_token">pk.eyJ1IjoiYW52aW5obHVvbmciLCJhIjoiY2w5bTcwcjJpMmM4djNwbW5waWZpYWRmdCJ9.9D7BI7KYGE9zqlxw8KcLUw</string>
+
+    <string name="log_in">Đăng nhập</string>
+    <string name="password">Mật khẩu</string>
+    <string name="email">Email</string>
+    <string name="sign_in">Đăng nhập</string>
+    <string name="edit_user">tài khoản</string>
+    <string name="edit_password">mật khẩu</string>
+
+<!--    button-->
+    <string name="button_edit">SỬA</string>
+    <string name="button_del">XOÁ</string>
+    <string name="button_cancel">HUỶ</string>
+    <string name="button_add">THÊM</string>
+    <string name="button_save">LƯU</string>
+
+<!--    activity_main-->
+    <string name="list_player">Danh sách cầu thủ</string>
+    <string name="list_club">Danh sách đội bóng</string>
+
+    <!--    activity_club-->
+    <string name="title_club_main">Danh sách đội bóng</string>
+    <!--    activity_club_add-->
+    <string name="title_club_add">Thêm đội bóng</string>
+    <string name="club_id">Mã Đội Bóng</string>
+    <string name="club_name">Tên Đội Bóng</string>
+    <string name="club_add_success">Thêm thành công</string>
+    <!--    activity_edit_club-->
+    <string name="title_club_edit">Chi tiết đội bóng</string>
+
+    <!--    activity_player-->
+    <string name="title_player_main">Danh sách cầu thủ</string>
+<!--    activity_player_detail-->
+    <string name="title_player_detail">Chi tiết cầu thủ</string>
+    <string name="player_id">Mã cầu thủ:</string>
+    <string name="player_name">Tên cầu thủ:</string>
+    <string name="player_dob">Ngày sinh:</string>
+    <string name="player_club">Đội bóng:</string>
+    <string name="player_postion">Vị trí:</string>
+<!--    activity_player_edit-->
+    <string name="title_player_edit">Chỉnh sửa cầu thủ</string>
+    <string name="title_player_image">Hình ảnh:</string>
+    <string name="title_player_image_choose">Chọn hình</string>
+<!--    activity_player_add-->
+    <string name="title_player_add">Thêm cầu thủ</string>
+    <string name="player_id_add">Mã cầu thủ</string>
+    <string name="player_name_add">Tên cầu thủ</string>
+
+    <!--    about-->
+    <string name="title_about">Giới thiệu phần mềm</string>
+    <string name="student_name">Tên:</string>
+    <string name="student_class">Lớp:</string>
+    <string name="student_id">MSSV:</string>
+    <string name="student_email">Email:</string>
+    <string name="student_phone">SĐT:</string>
+
+
+    <string name="facebook_app_id">526498191468722</string>
+    <string name="fb_login_protocol_scheme">fb526498191468722</string>
+</resources>
