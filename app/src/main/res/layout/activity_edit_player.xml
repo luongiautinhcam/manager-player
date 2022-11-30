@@ -207,8 +207,8 @@
 
     <ImageView
         android:id="@+id/imgImage"
-        android:layout_width="100pt"
-        android:layout_height="100pt"
+        android:layout_width="60pt"
+        android:layout_height="60pt"
         app:layout_constraintTop_toBottomOf="@+id/btnSave"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

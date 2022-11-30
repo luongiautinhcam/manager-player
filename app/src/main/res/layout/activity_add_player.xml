@@ -205,12 +205,11 @@
 
     <ImageView
         android:id="@+id/imgImage"
-        android:layout_width="100pt"
-        android:layout_height="100pt"
-        app:layout_constraintTop_toBottomOf="@+id/btnAddPlayer"
+        android:layout_width="60pt"
+        android:layout_height="60pt"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -157,7 +157,10 @@ public class PlayerDetailActivity extends BaseActivity {
 
         if (requestCode == ADD_ACTIVITY_REQUEST_CODE_EDIT){
             if (resultCode == RESULT_OK) {
-                hienThiPlayer();
+                Intent intent = new Intent();
+                intent.putExtra("KEY_PLAYER", "OK");
+                setResult(Activity.RESULT_OK, intent);
+                finish();
             }
         }
     }

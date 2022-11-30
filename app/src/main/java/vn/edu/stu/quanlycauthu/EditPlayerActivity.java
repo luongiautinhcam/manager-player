@@ -101,8 +101,9 @@ public class EditPlayerActivity extends BaseActivity {
                 etPlayerID.setText("" + player.getId());
                 etPlayerName.setText(player.getName());
                 etPlayerDob.setText(FormatUtil.toString(player.getDob()));
+                radPlayerPostion.check(R.id.radPlayerPostionMF);
 
-                if (player.getPostion() == "T.Môn") {
+                if (player.getPostion() == radPlayerPostionGK.getText().toString()) {
                     radPlayerPostion.check(R.id.radPlayerPostionGK);
                 } else if (player.getPostion() == radPlayerPostionDF.getText().toString()) {
                     radPlayerPostion.check(R.id.radPlayerPostionDF);
@@ -181,6 +182,8 @@ public class EditPlayerActivity extends BaseActivity {
 
         String gk = radPlayerPostionGK.getText().toString().trim();
         String df = radPlayerPostionDF.getText().toString().trim();
+        String mf = radPlayerPostionMF.getText().toString().trim();
+        String cf = radPlayerPostionCF.getText().toString().trim();
 
         Club clubs = (Club) spClub.getSelectedItem();
 
@@ -199,9 +202,22 @@ public class EditPlayerActivity extends BaseActivity {
         player.setImage(image);
         player.setIdClub(clubs.getId());
         player.setNameClub(clubs.getName());
+        player.setPostion("T.Môn");
 
-        player.setPostion(gk);
-        player.setPostion(df);
+//        player.setPostion(gk);
+//        player.setPostion(df);
+//        player.setPostion(mf);
+//        player.setPostion(cf);
+
+//        if (radPlayerPostionGK.isChecked()) {
+//            player.setPostion(gk);
+//        } else if (radPlayerPostionDF.isChecked()) {
+//            player.setPostion(df);
+//        } else if (radPlayerPostionMF.isChecked()) {
+//            player.setPostion(mf);
+//        } else {
+//            player.setPostion(cf);
+//        }
 
         if (radPlayerPostionGK.isChecked()) {
             player.setPostion(radPlayerPostionGK.getText().toString().trim());
