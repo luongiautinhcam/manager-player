@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 public class DbHelper extends SQLiteOpenHelper {
-    private static final String DB_NAME = "DBPlayer1234";
+    private static final String DB_NAME = "DBPlayer12345";
     private static final int DB_VERSION = 1;
 
     public DbHelper(@Nullable Context context) {
@@ -21,7 +21,7 @@ public class DbHelper extends SQLiteOpenHelper {
                 " name text not null)";
         String playerSql = "CREATE TABLE player(id integer primary key autoincrement, " +
                 " name text not null, clubid text, dob text, clubname text, postion text, image blob, value integer, " +
-                " FOREIGN KEY (clubid) REFERENCES club(id))";
+                " FOREIGN KEY (clubid) REFERENCES club(id) ON DELETE CASCADE ON UPDATE CASCADE)";
         sqLiteDatabase.execSQL(clubSql);
         sqLiteDatabase.execSQL(playerSql);
 
@@ -36,5 +36,14 @@ public class DbHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(playerSql);
 
         onCreate(sqLiteDatabase);
+    }
+
+    @Override
+    public void onOpen(SQLiteDatabase db) {
+        super.onOpen(db);
+        if (!db.isReadOnly()) {
+            // Enable foreign key constraints
+            db.execSQL("PRAGMA foreign_keys=ON;");
+        }
     }
 }

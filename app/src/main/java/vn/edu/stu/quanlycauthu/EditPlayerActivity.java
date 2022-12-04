@@ -123,12 +123,12 @@ public class EditPlayerActivity extends BaseActivity {
                 xuLySua();
             }
         });
-        btnDatePicker.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                xuLyChonNgay();
-            }
-        });
+//        btnDatePicker.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                xuLyChonNgay();
+//            }
+//        });
         btnChooseImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -222,7 +222,7 @@ public class EditPlayerActivity extends BaseActivity {
             }
         };
         DatePickerDialog datePickerDialog = new DatePickerDialog(
-                this,
+                EditPlayerActivity.this,
                 listener,
                 calendar.get(Calendar.YEAR),
                 calendar.get(Calendar.MONTH),

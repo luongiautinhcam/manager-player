@@ -69,6 +69,7 @@ public class PlayerDao {
         return get(sql,"" + clubId);
     }
 
+
     public int delete(String id) {
         return db.delete("player", "id=?", new String[]{id});
     }

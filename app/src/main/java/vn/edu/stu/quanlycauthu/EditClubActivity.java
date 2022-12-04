@@ -88,6 +88,8 @@ public class EditClubActivity extends BaseActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 if (which == 0) {
+                    String id = etClubID.getText().toString().trim();
+                    PlayerDao daoplayer = new PlayerDao(EditClubActivity.this);
                     ClubDao dao = new ClubDao(EditClubActivity.this);
                     dao.delete("" + club.getId());
                     Toast.makeText(EditClubActivity.this, "Xoá thành công", Toast.LENGTH_SHORT).show();
