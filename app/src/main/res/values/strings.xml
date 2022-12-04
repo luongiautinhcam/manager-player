@@ -37,6 +37,7 @@
     <string name="player_dob">Dob:</string>
     <string name="player_club">Club:</string>
     <string name="player_postion">Postion:</string>
+    <string name="player_value">Value:</string>
     <!--    activity_player_edit-->
     <string name="title_player_edit">Edit Player</string>
     <string name="title_player_image">Image:</string>
@@ -45,6 +46,7 @@
     <string name="title_player_add">Add Player</string>
     <string name="player_id_add">Player ID</string>
     <string name="player_name_add">Player Name</string>
+    <string name="player_value_add">Player Value</string>
 
     <!--    about-->
     <string name="title_about">About App</string>

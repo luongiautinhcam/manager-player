@@ -95,47 +95,27 @@
         app:layout_constraintTop_toTopOf="@+id/etPlayerDob" />
 
     <TextView
-        android:id="@+id/tvPlayerPostion"
+        android:id="@+id/tvPlayerValue"
         android:layout_width="50pt"
         android:layout_height="0pt"
         android:gravity="center_vertical"
-        android:text="@string/player_postion"
+        android:text="@string/player_value"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/radPlayerPostion"
+        app:layout_constraintBottom_toBottomOf="@+id/etPlayerValue"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvPlayerDob" />
 
-    <RadioGroup
-        android:id="@+id/radPlayerPostion"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/etPlayerValue"
+        android:layout_width="0pt"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintLeft_toRightOf="@+id/tvPlayerPostion"
-        app:layout_constraintTop_toTopOf="@+id/tvPlayerPostion">
-        <RadioButton
-            android:id="@+id/radPlayerPostionGK"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="T.Môn"/>
+        android:hint="@string/player_value_add"
+        android:inputType="number"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@id/tvPlayerValue"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvPlayerValue" />
 
-        <RadioButton
-            android:id="@+id/radPlayerPostionDF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="H.Vệ" />
-
-        <RadioButton
-            android:id="@+id/radPlayerPostionMF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="T.Vệ" />
-
-        <RadioButton
-            android:id="@+id/radPlayerPostionCF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="T.Đạo" />
-    </RadioGroup>
 
     <TextView
         android:id="@+id/tvClub"
@@ -146,7 +126,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/spClub"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvPlayerPostion" />
+        app:layout_constraintTop_toBottomOf="@id/tvPlayerValue" />
 
     <Spinner
         android:id="@+id/spClub"

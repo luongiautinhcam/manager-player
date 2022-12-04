@@ -56,9 +56,18 @@ public class AddClubActivity extends BaseActivity {
     }
 
     private void xuLyThem() {
+        String ma = etClubID.getText().toString().trim();
+        String ten = etClubName.getText().toString().trim();
+        if (ma.isEmpty() || ten.isEmpty()) {
+            Toast.makeText(this, "Vui lòng nhập dữ liệu", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         Club club = new Club();
-        club.setName(etClubName.getText().toString());
-        club.setId(etClubID.getText().toString());
+        club.setName(ten);
+        club.setId(ma);
+//        club.setName(etClubName.getText().toString());
+//        club.setId(etClubID.getText().toString());
         ClubDao dao = new ClubDao(this);
         dao.insert(club);
         Toast.makeText(this,"Thêm thành công",Toast.LENGTH_SHORT).show();

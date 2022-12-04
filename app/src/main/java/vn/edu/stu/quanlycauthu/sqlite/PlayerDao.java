@@ -28,6 +28,7 @@ public class PlayerDao {
         values.put("id", emp.getId());
         values.put("name", emp.getName());
         values.put("dob", FormatUtil.toString(emp.getDob()));
+        values.put("value", emp.getValue());
         values.put("postion", emp.getPostion());
         values.put("clubid", emp.getIdClub());
         values.put("clubname", emp.getNameClub());
@@ -48,6 +49,7 @@ public class PlayerDao {
             player.setId(cursor.getInt(cursor.getColumnIndex("id")));
             player.setName(cursor.getString(cursor.getColumnIndex("name")));
             player.setDob(FormatUtil.toDate(cursor.getString(cursor.getColumnIndex("dob"))));
+            player.setValue(cursor.getInt(cursor.getColumnIndex("value")));
             player.setPostion(cursor.getString(cursor.getColumnIndex("postion")));
             player.setIdClub(cursor.getString(cursor.getColumnIndex("clubid")));
             player.setNameClub(cursor.getString(cursor.getColumnIndex("clubname")));
@@ -77,6 +79,7 @@ public class PlayerDao {
         values.put("id", player.getId());
         values.put("name", player.getName());
         values.put("dob", FormatUtil.toString(player.getDob()));
+        values.put("value", player.getValue());
         values.put("image", player.getImage());
         values.put("clubid", player.getIdClub());
         values.put("clubname", player.getNameClub());

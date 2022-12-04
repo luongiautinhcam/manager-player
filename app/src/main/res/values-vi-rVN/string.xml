@@ -40,6 +40,7 @@
     <string name="player_dob">Ngày sinh:</string>
     <string name="player_club">Đội bóng:</string>
     <string name="player_postion">Vị trí:</string>
+    <string name="player_value">Giá trị:</string>
 <!--    activity_player_edit-->
     <string name="title_player_edit">Chỉnh sửa cầu thủ</string>
     <string name="title_player_image">Hình ảnh:</string>
@@ -48,6 +49,7 @@
     <string name="title_player_add">Thêm cầu thủ</string>
     <string name="player_id_add">Mã cầu thủ</string>
     <string name="player_name_add">Tên cầu thủ</string>
+    <string name="player_value_add">Giá trị cầu thủ</string>
 
     <!--    about-->
     <string name="title_about">Giới thiệu phần mềm</string>

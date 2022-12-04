@@ -7,6 +7,7 @@ public class Player implements Serializable {
     Integer id;
     String name;
     Date dob;
+    Integer value;
     String postion;
     byte[] image;
     String idClub;
@@ -15,10 +16,11 @@ public class Player implements Serializable {
     public Player() {
     }
 
-    public Player(Integer id, String name, Date dob, String postion, byte[] image, String idClub, String nameClub) {
+    public Player(Integer id, String name, Date dob, Integer value,String postion, byte[] image, String idClub, String nameClub) {
         this.id = id;
         this.name = name;
         this.dob = dob;
+        this.value = value;
         this.postion = postion;
         this.image = image;
         this.idClub = idClub;
@@ -51,6 +53,14 @@ public class Player implements Serializable {
 
     public String getPostion() {
         return postion;
+    }
+
+    public Integer getValue() {
+        return value;
+    }
+
+    public void setValue(Integer value) {
+        this.value = value;
     }
 
     public void setPostion(String postion) {

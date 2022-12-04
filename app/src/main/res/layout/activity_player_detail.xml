@@ -110,22 +110,22 @@
         app:layout_constraintTop_toBottomOf="@+id/tvTitlePlayerDob" />
 
     <TextView
-        android:id="@+id/tvTitlePlayerPostion"
+        android:id="@+id/tvTitlePlayerValue"
         android:layout_width="60pt"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:text="@string/player_postion"
+        android:text="@string/player_value"
         android:textSize="20sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/tvPlayerID"
         app:layout_constraintTop_toBottomOf="@+id/tvTitleClub" />
 
     <TextView
-        android:id="@+id/tvPlayerPostion"
+        android:id="@+id/tvPlayerValue"
         android:layout_width="0pt"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:text="vitri"
+        android:text="giatri"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toRightOf="@+id/tvTitlePlayerID"
@@ -144,7 +144,7 @@
         android:paddingRight="20dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/btnEdit"
-        app:layout_constraintTop_toBottomOf="@id/tvTitlePlayerPostion" />
+        app:layout_constraintTop_toBottomOf="@id/tvTitlePlayerValue" />
 
     <Button
         android:id="@+id/btnEdit"
@@ -159,6 +159,6 @@
         android:paddingRight="20dp"
         app:layout_constraintLeft_toRightOf="@+id/btnDelete"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTitlePlayerPostion" />
+        app:layout_constraintTop_toBottomOf="@id/tvTitlePlayerValue" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

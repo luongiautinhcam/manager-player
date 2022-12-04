@@ -31,7 +31,7 @@ import vn.edu.stu.quanlycauthu.util.FormatUtil;
 
 public class PlayerDetailActivity extends BaseActivity {
     DbHelper dbHelper;
-    TextView tvPlayerID, tvPlayerName, tvPlayerDob, tvPlayerPostion, tvClub;
+    TextView tvPlayerID, tvPlayerName, tvPlayerDob, tvPlayerPostion, tvPlayerValue, tvClub;
     ImageView imgPlayer;
     Button btnDelete, btnEdit;
 
@@ -60,7 +60,7 @@ public class PlayerDetailActivity extends BaseActivity {
         tvPlayerID = findViewById(R.id.tvPlayerID);
         tvPlayerName = findViewById(R.id.tvPlayerName);
         tvPlayerDob = findViewById(R.id.tvPlayerDob);
-        tvPlayerPostion = findViewById(R.id.tvPlayerPostion);
+        tvPlayerValue = findViewById(R.id.tvPlayerValue);
         tvClub = findViewById(R.id.tvClub);
         imgPlayer = findViewById(R.id.imgPlayer);
         btnDelete = findViewById(R.id.btnDelete);
@@ -82,7 +82,7 @@ public class PlayerDetailActivity extends BaseActivity {
                 tvPlayerID.setText("" + player.getId());
                 tvPlayerName.setText(player.getName());
                 tvPlayerDob.setText(FormatUtil.toString(player.getDob()));
-                tvPlayerPostion.setText(player.getPostion());
+                tvPlayerValue.setText("" + player.getValue());
                 tvClub.setText(player.getNameClub());
                 byte[] image = player.getImage();
                 Bitmap bitmap = BitmapFactory.decodeByteArray(image,0 ,image.length);

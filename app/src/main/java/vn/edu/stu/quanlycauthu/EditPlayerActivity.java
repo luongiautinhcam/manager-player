@@ -39,10 +39,8 @@ import vn.edu.stu.quanlycauthu.util.FormatUtil;
 
 public class EditPlayerActivity extends BaseActivity {
     DbHelper dbHelper;
-    EditText etPlayerID, etPlayerName, etPlayerDob;
+    EditText etPlayerID, etPlayerName, etPlayerDob, etPlayerValue;
     ImageButton btnDatePicker;
-    RadioButton radPlayerPostionGK, radPlayerPostionDF, radPlayerPostionMF, radPlayerPostionCF;
-    RadioGroup radPlayerPostion;
     Spinner spClub;
     Button btnChooseImage ,btnSave, btnCancel;
     ImageView imgImage;
@@ -71,13 +69,8 @@ public class EditPlayerActivity extends BaseActivity {
         etPlayerID.setEnabled(false);
         etPlayerName = findViewById(R.id.etPlayerName);
         etPlayerDob = findViewById(R.id.etPlayerDob);
+        etPlayerValue = findViewById(R.id.etPlayerValue);
         btnDatePicker = findViewById(R.id.btnDatePicker);
-
-        radPlayerPostionGK = findViewById(R.id.radPlayerPostionGK);
-        radPlayerPostionDF = findViewById(R.id.radPlayerPostionDF);
-        radPlayerPostionMF = findViewById(R.id.radPlayerPostionMF);
-        radPlayerPostionCF = findViewById(R.id.radPlayerPostionCF);
-        radPlayerPostion=(RadioGroup)findViewById(R.id.radPlayerPostion);
 
         spClub = findViewById(R.id.spClub);
 
@@ -101,17 +94,8 @@ public class EditPlayerActivity extends BaseActivity {
                 etPlayerID.setText("" + player.getId());
                 etPlayerName.setText(player.getName());
                 etPlayerDob.setText(FormatUtil.toString(player.getDob()));
-                radPlayerPostion.check(R.id.radPlayerPostionMF);
+                etPlayerValue.setText("" + player.getValue());
 
-                if (player.getPostion() == radPlayerPostionGK.getText().toString()) {
-                    radPlayerPostion.check(R.id.radPlayerPostionGK);
-                } else if (player.getPostion() == radPlayerPostionDF.getText().toString()) {
-                    radPlayerPostion.check(R.id.radPlayerPostionDF);
-                } else if (player.getPostion() == radPlayerPostionMF.getText()) {
-                    radPlayerPostion.check(R.id.radPlayerPostionMF);
-                } else  if (player.getPostion() == radPlayerPostionCF.getText()){
-                    radPlayerPostion.check(R.id.radPlayerPostionCF);
-                }
                 byte[] image = player.getImage();
                 Bitmap bitmap = BitmapFactory.decodeByteArray(image,0 ,image.length);
                 imgImage.setImageBitmap(bitmap);
@@ -179,11 +163,7 @@ public class EditPlayerActivity extends BaseActivity {
         try {
         String ten = etPlayerName.getText().toString().trim();
         String ngay = etPlayerDob.getText().toString().trim();
-
-        String gk = radPlayerPostionGK.getText().toString().trim();
-        String df = radPlayerPostionDF.getText().toString().trim();
-        String mf = radPlayerPostionMF.getText().toString().trim();
-        String cf = radPlayerPostionCF.getText().toString().trim();
+        Integer gia = Integer.valueOf(etPlayerValue.getText().toString().trim());
 
         Club clubs = (Club) spClub.getSelectedItem();
 
@@ -199,35 +179,10 @@ public class EditPlayerActivity extends BaseActivity {
         }
         player.setName(ten);
         player.setDob(FormatUtil.toDate(ngay));
+        player.setValue(gia);
         player.setImage(image);
         player.setIdClub(clubs.getId());
         player.setNameClub(clubs.getName());
-        player.setPostion("T.Môn");
-
-//        player.setPostion(gk);
-//        player.setPostion(df);
-//        player.setPostion(mf);
-//        player.setPostion(cf);
-
-//        if (radPlayerPostionGK.isChecked()) {
-//            player.setPostion(gk);
-//        } else if (radPlayerPostionDF.isChecked()) {
-//            player.setPostion(df);
-//        } else if (radPlayerPostionMF.isChecked()) {
-//            player.setPostion(mf);
-//        } else {
-//            player.setPostion(cf);
-//        }
-
-        if (radPlayerPostionGK.isChecked()) {
-            player.setPostion(radPlayerPostionGK.getText().toString().trim());
-        } else if (radPlayerPostionDF.isChecked()) {
-            player.setPostion(radPlayerPostionDF.getText().toString().trim());
-        } else if (radPlayerPostionMF.isChecked()) {
-            player.setPostion(radPlayerPostionMF.getText().toString());
-        } else {
-            player.setPostion(radPlayerPostionCF.getText().toString());
-        }
 
         PlayerDao dao = new PlayerDao(this);
         if (dao != null) {

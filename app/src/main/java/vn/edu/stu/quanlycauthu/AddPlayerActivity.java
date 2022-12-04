@@ -35,7 +35,7 @@ import vn.edu.stu.quanlycauthu.sqlite.PlayerDao;
 import vn.edu.stu.quanlycauthu.util.FormatUtil;
 
 public class AddPlayerActivity extends BaseActivity {
-    EditText etPlayerID, etPlayerName, etPlayerDob;
+    EditText etPlayerID, etPlayerName, etPlayerDob, etPlayerValue;
     RadioButton radPlayerPostionGK, radPlayerPostionDF, radPlayerPostionMF, radPlayerPostionCF;
 
 
@@ -71,11 +71,7 @@ public class AddPlayerActivity extends BaseActivity {
         etPlayerID.setEnabled(false);
         etPlayerName = findViewById(R.id.etPlayerName);
         etPlayerDob = findViewById(R.id.etPlayerDob);
-
-        radPlayerPostionGK = findViewById(R.id.radPlayerPostionGK);
-        radPlayerPostionDF = findViewById(R.id.radPlayerPostionDF);
-        radPlayerPostionMF = findViewById(R.id.radPlayerPostionMF);
-        radPlayerPostionCF = findViewById(R.id.radPlayerPostionCF);
+        etPlayerValue = findViewById(R.id.etPlayerValue);
 
         btnAddImage = findViewById(R.id.btnAddImage);
         imgImage = findViewById(R.id.imgImage);
@@ -155,16 +151,7 @@ public class AddPlayerActivity extends BaseActivity {
             Player player = new Player();
             player.setName(etPlayerName.getText().toString());
             player.setDob(FormatUtil.toDate(etPlayerDob.getText().toString()));
-
-            if (radPlayerPostionGK.isChecked()) {
-                player.setPostion(radPlayerPostionGK.getText().toString());
-            } else if (radPlayerPostionDF.isChecked()) {
-                player.setPostion(radPlayerPostionDF.getText().toString());
-            } else if (radPlayerPostionMF.isChecked()) {
-                player.setPostion(radPlayerPostionMF.getText().toString());
-            } else {
-                player.setPostion(radPlayerPostionCF.getText().toString());
-            }
+            player.setValue(Integer.valueOf(etPlayerValue.getText().toString()));
             player.setImage(image);
 
             Club clubs = (Club) spClub.getSelectedItem();
